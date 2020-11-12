@@ -38,6 +38,11 @@ export class Home extends Component {
             </div>
           </div>
         </main>
+
+        <footer className={styles.footer}>
+          Made by&nbsp;
+          <a href="https://flawlessexecution.gg">Flawless Execution</a>
+        </footer>
       </div>
     );
   }

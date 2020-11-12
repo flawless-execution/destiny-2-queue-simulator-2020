@@ -1,5 +1,5 @@
 import SVG from 'react-inlinesvg';
-import styles from '../styles/spinner.module.scss';
+import styles from '../styles/Spinner.module.scss';
 // import loading_spinner from '../public/loading-spinner.svg';
 
 export default function Spinner() {
