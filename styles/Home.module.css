@@ -84,3 +84,7 @@
   color: hsla(0, 0%, 90%, 0.5);
   font-size: 0.9rem;
 }
+
+.footer a {
+  text-decoration: underline;
+}
