@@ -1,0 +1,104 @@
+:root {
+  --text-width: 40rem;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --color-fore: hsl(196, 77%, 12%);
+  --color-back: hsl(180, 6%, 3%);
+  background: radial-gradient(
+      circle at 50% 40%,
+      var(--color-fore) 5%,
+      transparent 90%
+    ),
+    radial-gradient(circle at 100% 70%, var(--color-fore) 0%, transparent 50%),
+    radial-gradient(circle at 0% 100%, var(--color-fore) 0%, transparent),
+    var(--color-back);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.spinner {
+  $dur: 3s;
+  $dur-padding: 1s;
+
+  .inner,
+  .outer {
+    > * {
+      animation-name: fadeinout;
+      animation-duration: $dur;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  .inner {
+    .top-left {
+      animation-delay: $dur * 5 / 6;
+    }
+    .left {
+      animation-delay: $dur * 4 / 6;
+    }
+    .bottom-left {
+      animation-delay: $dur * 3 / 6;
+    }
+    .bottom-right {
+      animation-delay: $dur * 2 / 6;
+    }
+    .right {
+      animation-delay: $dur * 1 / 6;
+    }
+    .top-right {
+      animation-delay: $dur * 0 / 6;
+    }
+  }
+
+  .outer {
+    .top-left {
+      animation-delay: $dur * 5 / 6 + $dur / 2;
+    }
+    .left {
+      animation-delay: $dur * 4 / 6 + $dur / 2;
+    }
+    .bottom-left {
+      animation-delay: $dur * 3 / 6 + $dur / 2;
+    }
+    .bottom-right {
+      animation-delay: $dur * 2 / 6 + $dur / 2;
+    }
+    .right {
+      animation-delay: $dur * 1 / 6 + $dur / 2;
+    }
+    .top-right {
+      animation-delay: $dur * 0 / 6 + $dur / 2;
+    }
+  }
+}
+
+@keyframes fadeinout {
+  from {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
